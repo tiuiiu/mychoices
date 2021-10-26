@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My NETFLIX Choices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#London {background-color:red;}
+#Paris {background-color:orange;}
+#Tokyo {background-color:green;}
+#Oslo {background-color:black;}
+</style>
+<div id="London" class="tabcontent">
+<h1>Squid Game</h1>
+<p>Hundreds of people, driven by debt, jump into a mysterious survival game with a prize of 45.6 billion won to start a new life. Those who are eliminated must be prepared for terrible consequences.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+<h1>Orange Is The New Black</h1>
+<p>A New Yorker imprisoned in a women's prison after a comfortable life, who's friend and who's enemy in this brutal jungle?</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+<h1>Good Place</h1>
+<p>The protagonist, who accidentally fell into the "good place" where only good people can come during his lifetime, tries to hide his identity and become a good person so that he will not be kicked out of the "bad place."</p>
+</div>
+
+<div id="Oslo" class="tabcontent">
+<h1>Black Mirror</h1>
+<p>It is a SF series called 'Fantastic Express' in the digital age. <br><br>Remarkably advanced technology. But as the dark instincts of humans take advantage of the technology, a bizarre nightmare begins.</p>
+</div>
+
+<button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen"><a style="color:white" href="3.html" target="_blank">Squid Game</a></button>
+<button class="tablink" onclick="openCity('Paris', this, 'orange')"><a style="color:white" href="4.html" target="_blank">Orange Is The New Black</a></button>
+<button class="tablink" onclick="openCity('Tokyo', this, 'green')"><a style="color:white" href="5.html" target="_blank">Good Place</a></button>
+<button class="tablink" onclick="openCity('Oslo', this, 'black')"><a style="color:white" href="6.html" target="_blank">Black Mirror</a></button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+  tabcontent[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("tablink");
+for (i = 0; i < tablinks.length; i++) {
+  tablinks[i].style.backgroundColor = "";
+}
+document.getElementById(cityName).style.display = "block";
+elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<br><br><h1 style="font-family:verdana; font-size:600%; text-align:center;">My Four Picks on NETFLIX</h1>
+<h2 style="font-size:350%; text-align:center;">Click the title above to watch!</h2>
+  </body>
+  </html>
